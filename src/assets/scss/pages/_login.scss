@@ -1,0 +1,23 @@
+.login {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  &__form {
+    flex: 6;
+  }
+  &__helper {
+    flex: 4;
+  }
+  &__forgot-password {
+    text-align: right;
+    &--link {
+      text-decoration: none;
+      color: $blue-color;
+      font-size: $text-medium;
+      transition: color 0.3s ease-in-out;
+      &:hover {
+        color: #777;
+      }
+    }
+  }
+}

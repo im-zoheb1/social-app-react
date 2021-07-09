@@ -1,0 +1,62 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  // font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+  //   'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: $font-text;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  // this defines what 1 rem is :
+  font-size: 62.5%; // 1rem = 10px; 10px/16px = 62.5%
+  text-rendering: optimizeLegibility;
+  @include respond(tab-land) {
+    // width < 900?
+    font-size: 56.25%; // 1rem = 9px, 9/16 = 50%
+  }
+
+  @include respond(tab-port) {
+    // width < 600?
+    font-size: 50%; // 1rem = 8px, 8/15 = 50%
+  }
+
+  @include respond(phone) {
+    font-size: 45%;
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; // 1rem = 12, 12/16
+  }
+}
+
+body {
+  box-sizing: border-box;
+  background-color: $bg-color;
+  @include respond(tab-port) {
+  }
+}
+
+.viewport {
+  width: 100%;
+  height: 100vh;
+  background: $bg-color;
+}
+
+.container {
+  // max-width: 110.4rem;
+  margin: auto;
+  @include respond(tab-land) {
+    padding: 0 2rem;
+  }
+}
+
+body {
+}
