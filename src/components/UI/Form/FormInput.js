@@ -8,6 +8,7 @@ const FormInput = (props) => {
           placeholder={props.placeholder}
           required={props.required}
         />
+        <div className="form__input--border"></div>
         <label className="form__input--label">{props.placeholder}</label>
       </div>
     </div>

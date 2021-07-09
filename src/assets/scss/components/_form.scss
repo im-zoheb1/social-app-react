@@ -25,31 +25,55 @@
       font-size: $text-medium;
       padding: 1rem 0.6rem;
       color: #333;
-      border-bottom: 3px solid #777;
       display: block;
       position: relative;
-      &:after {
-        position: absolute;
-        content: '';
-        display: table;
-        height: 50px;
-        width: 100%;
-        bottom: 0;
-        left: 0;
-        background-color: yellow;
-      }
       &::placeholder {
         font-family: inherit;
         color: #666;
       }
-      &:focus:not(:valid) {
-        border-bottom: 3px solid $red-color;
+    }
+    &--border {
+      width: 100%;
+      height: 4px;
+      background-color: #999;
+      margin-top: 1px;
+      position: relative;
+      &::after,
+      &::before {
+        content: '';
+        display: table;
+        position: absolute;
+        width: 0;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transition: width 0.7s cubic-bezier(0.74, 0.73, 0.23, 1);
       }
-      &:focus:valid {
-        border-bottom: 3px solid $primary-color;
+      &::after {
+        background-color: $primary-color;
+      }
+      &::before {
+        background-color: $red-color;
       }
     }
-    &--input:placeholder-shown + &--label {
+    &--input:valid:not(:placeholder-shown) ~ &--border::after {
+      width: 100%;
+    }
+    &--input:not(valid):not(:placeholder-shown) ~ &--border::before {
+      width: 100%;
+    }
+    &--input:focus:not(:valid) ~ &--border::after,
+    &--input:focus:valid ~ &--border::before {
+      left: auto;
+      right: 0;
+      width: 0;
+    }
+    &--input:focus:valid ~ &--border::after,
+    &--input:focus:not(:valid) ~ &--border::before {
+      width: 100%;
+    }
+
+    &--input:placeholder-shown ~ &--label {
       opacity: 0;
       visibility: hidden;
       transform: translateY(-4rem);
