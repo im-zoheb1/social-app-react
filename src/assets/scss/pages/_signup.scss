@@ -1,0 +1,19 @@
+.signup {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  &__router {
+    &--link {
+      text-decoration: none;
+    }
+  }
+  &__form {
+    flex: 6;
+  }
+  &__helper {
+    flex: 4;
+  }
+  &--btn {
+    margin-top: 6rem;
+  }
+}

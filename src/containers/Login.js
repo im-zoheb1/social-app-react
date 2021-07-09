@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import EntryForm from 'containers/Entry/EntryForm';
 import EntryHelper from 'containers/Entry/EntryHelper';
 import Button from 'components/UI/Button';
@@ -12,10 +14,12 @@ const Login = () => {
     <div className="viewport">
       <div className="login">
         <EntryHelper text={entryText}>
-          <Button variant="btn--light btn--big btn--pilled">Sign Up</Button>
+          <Link className="login__router--link" to="/signup">
+            <Button variant="btn--light btn--big btn--pilled">Sign Up</Button>
+          </Link>
         </EntryHelper>
         <EntryForm>
-          <Form title="Log In">
+          <Form title="Sign In">
             <FormGroup>
               <FormInput type="email" placeholder="Email address" required></FormInput>
             </FormGroup>
