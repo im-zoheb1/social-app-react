@@ -13,9 +13,15 @@
 @import 'components/form';
 @import 'components/logo';
 @import 'components/button';
+@import 'components/sidenav';
+@import 'components/card';
+@import 'components/createPost';
 
 // LAYOUT
+@import 'layout/dashboard';
+@import 'layout/mansory';
 
 // PAGES
 @import 'pages/login';
 @import 'pages/signup';
+@import 'pages/home';

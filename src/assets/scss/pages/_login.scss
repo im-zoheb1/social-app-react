@@ -16,6 +16,10 @@
   &__forgot-password {
     text-align: right;
     &--link {
+      background: none;
+      outline: none;
+      border: none;
+      cursor: pointer;
       text-decoration: none;
       color: $blue-color;
       font-size: $text-medium;

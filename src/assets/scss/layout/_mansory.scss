@@ -1,0 +1,8 @@
+.mansory {
+  columns: 400px;
+  column-gap: $page-margin;
+  &__item {
+    break-inside: avoid-column;
+    margin-bottom: $page-margin;
+  }
+}

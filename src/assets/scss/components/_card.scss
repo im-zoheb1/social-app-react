@@ -1,0 +1,18 @@
+.card {
+  background-color: $white-color;
+  box-shadow: $box-shadow;
+  border-radius: $rounded-border;
+  width: 100%;
+  height: auto;
+  &__header,
+  &__body,
+  &__footer {
+    padding: $card-padding;
+  }
+
+  &__header {
+  }
+  &__footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
