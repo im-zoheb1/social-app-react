@@ -1,4 +1,9 @@
 .home {
   margin: $page-margin;
   flex: 1;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
 }

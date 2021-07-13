@@ -1,2 +1,19 @@
 .create-post {
+  overflow: visible;
+  height: auto;
+  &--textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    letter-spacing: 0.5px;
+    font-family: inherit;
+    font-size: $text-small;
+    &::placeholder {
+      font-weight: 600;
+    }
+  }
+  &__footer {
+    margin-left: auto;
+  }
 }

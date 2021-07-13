@@ -14,6 +14,15 @@ const Home = () => {
         <MansoryItem>
           <PostCard></PostCard>
         </MansoryItem>
+        <MansoryItem>
+          <PostCard></PostCard>
+        </MansoryItem>
+        <MansoryItem>
+          <PostCard></PostCard>
+        </MansoryItem>
+        <MansoryItem>
+          <PostCard></PostCard>
+        </MansoryItem>
       </Mansory>
     </div>
   );
