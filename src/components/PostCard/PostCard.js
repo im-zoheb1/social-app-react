@@ -10,18 +10,16 @@ const PostCard = (props) => {
   return (
     <div className="post-card">
       <Card>
-        <CardHeader>
+        <CardBody>
           <div className="post-card__header">
-            <div className="post-card__user">
-              <img className="post-card--user" src={post.image} alt={post.name} />
+            <div className="post-card__user-img">
+              <img className="post-card--user-img" src={post.image} alt={post.name} />
             </div>
             <div className="post-card__user-info">
               <div className="post-card--username">{post.name}</div>
               <div className="post-card--address">{post.city}</div>
             </div>
           </div>
-        </CardHeader>
-        <CardBody>
           <div className="post-card__body">
             <p className="post-card__body--text">{post.text}</p>
           </div>
