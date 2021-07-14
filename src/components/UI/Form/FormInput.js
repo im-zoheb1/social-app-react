@@ -9,7 +9,7 @@ const FormInput = (props) => {
           required={props.required}
         />
         <div className="form__input--border"></div>
-        <label className="form__input--label">{props.placeholder}</label>
+        {props.label && <label className="form__input--label">{props.label}</label>}
       </div>
     </div>
   );

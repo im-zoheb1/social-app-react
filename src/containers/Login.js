@@ -27,10 +27,10 @@ function Login() {
         <EntryForm>
           <Form title="Sign In" onSubmit={handleLogin}>
             <FormGroup>
-              <FormInput type="email" placeholder="Email address" required></FormInput>
+              <FormInput type="email" placeholder="Email address" label="Email address" required></FormInput>
             </FormGroup>
             <FormGroup>
-              <FormInput type="password" placeholder="Password" required></FormInput>
+              <FormInput type="password" placeholder="Password" label="Password" required></FormInput>
             </FormGroup>
             <FormGroup>
               <div className="login__forgot-password">

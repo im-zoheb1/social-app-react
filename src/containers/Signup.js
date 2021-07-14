@@ -19,16 +19,16 @@ const Signup = () => {
         <EntryForm>
           <Form title="Sign Up" onSubmit={handleSignup}>
             <FormGroup>
-              <FormInput type="text" placeholder="Full name" required></FormInput>
+              <FormInput type="text" placeholder="Full name" label="Full name" required></FormInput>
             </FormGroup>
             <FormGroup>
-              <FormInput type="text" placeholder="Username" required></FormInput>
+              <FormInput type="text" placeholder="Username" label="Username" required></FormInput>
             </FormGroup>
             <FormGroup>
-              <FormInput type="email" placeholder="Email address" required></FormInput>
+              <FormInput type="email" placeholder="Email address" label="Email address" required></FormInput>
             </FormGroup>
             <FormGroup>
-              <FormInput type="password" placeholder="Password" required></FormInput>
+              <FormInput type="password" placeholder="Password" label="Email address" required></FormInput>
             </FormGroup>
             <Button variant="btn--primary btn--big btn--pilled">Sign up</Button>
           </Form>
