@@ -18,7 +18,7 @@
   }
   &--username {
     font-size: $text-small;
-    font-weight: 500;
+    font-weight: 600;
     color: $text-color;
   }
   &--address {
@@ -29,10 +29,11 @@
   &__body {
     &--text {
       font-size: $text-small;
-      color: #555;
-      text-transform: capitalize;
+      color: $text-color;
       padding-bottom: 1rem;
       padding-top: 1.5rem;
+      &::first-letter {
+      }
     }
   }
   &__actions {
@@ -51,13 +52,59 @@
     &--icon {
       margin-right: 0.5rem;
       font-size: 2.4rem;
-      color: #555;
+      color: #333;
       cursor: pointer;
     }
     &--text {
       color: #555;
       font-weight: 500;
       font-size: $text-xsmall;
+    }
+  }
+  &__input {
+    padding-top: 1.2rem;
+  }
+  &__comments {
+    padding-top: 2.3rem;
+  }
+  &__comment {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    &-img {
+      width: 4.5rem;
+      height: 4.5rem;
+      border-radius: 50%;
+      overflow: hidden;
+      &--img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &--text {
+      flex: 1;
+      font-size: $text-xsmall;
+      margin-left: 1.5rem;
+      background-color: #f0f1f5b9;
+      color: #333;
+      padding: 1rem 1.5rem;
+      border: 1px solid rgba(71, 32, 32, 0.08);
+      border-radius: 7px;
+    }
+  }
+  &--more {
+    color: $blue-color;
+    background: none;
+    outline: none;
+    padding: none;
+    border: none;
+    font-size: $text-small;
+    text-transform: capitalize;
+    margin-top: 2rem;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
     }
   }
 }

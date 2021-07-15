@@ -3,7 +3,9 @@
   flex: 1;
   overflow-y: scroll;
   scrollbar-width: none;
+  padding: 2px;
   &::-webkit-scrollbar {
     width: 0;
+    height: 0;
   }
 }

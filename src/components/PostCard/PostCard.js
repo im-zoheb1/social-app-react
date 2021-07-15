@@ -25,29 +25,31 @@ const PostCard = (props) => {
           </div>
         </CardBody>
         <CardFooter>
-          <div className="post-card__actions">
-            <div className="post-card__action">
-              <i className="bx bx-like post-card__action--icon"></i>
-              <span className="post-card__action--text">{post.likes}</span>
-            </div>
-            <div className="post-card__action">
-              <i className="bx bx-comment-minus post-card__action--icon"></i>
-              <span className="post-card__action--text">{post.comments}</span>
-            </div>
-          </div>
-          <div className="post-card__input">
-            <FormInput type="text" placeholder="Write a comment"></FormInput>
-          </div>
-          <div className="post-card__comments">
-            <div className="post-card__comment">
-              <div className="post-card__comment-img">
-                <img className="post-card__comment-img--img" src={post.commentImage} alt="person" />
+          <div className="post-card__footer">
+            <div className="post-card__actions">
+              <div className="post-card__action">
+                <i className="bx bx-like post-card__action--icon"></i>
+                <span className="post-card__action--text">Like</span>
               </div>
-              <div className="post-card__comment--text">{post.commentText}</div>
-              <div></div>
+              <div className="post-card__action">
+                <i className="bx bx-comment-minus post-card__action--icon"></i>
+                <span className="post-card__action--text">Comment</span>
+              </div>
             </div>
+            <div className="post-card__input">
+              <FormInput type="text" size="small" placeholder="Write a comment"></FormInput>
+            </div>
+            <div className="post-card__comments">
+              <div className="post-card__comment">
+                <div className="post-card__comment-img">
+                  <img className="post-card__comment-img--img" src={post.commentImage} alt="person" />
+                </div>
+                <div className="post-card__comment--text">{post.commentText}</div>
+                <div></div>
+              </div>
+            </div>
+            <button className="post-card--more">more</button>
           </div>
-          <button className="post-card--more">more</button>
         </CardFooter>
       </Card>
     </div>
